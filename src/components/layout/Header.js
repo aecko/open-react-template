@@ -128,6 +128,18 @@ const Header = ({
                     <li>
                       <Link
                         onClick={() => {
+                          closeMenu();
+                        }}
+                      >
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Dropdown title="Disciplines" options={DropdownOptions} />
+                    </li>
+                    <li>
+                      <Link
+                        onClick={() => {
                           anchor.scrollIntoView({
                             behavior: "smooth",
                             block: "center",
@@ -139,15 +151,8 @@ const Header = ({
                         Projects
                       </Link>
                     </li>
-                    <li>
-                      <Dropdown title="Disciplines" options={DropdownOptions} />
-                    </li>
-                    <li>
-                      <Link to="#1" onClick={closeMenu}>
-                        Projects
-                      </Link>
-                    </li>
                   </ul>
+
                   {!hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>
