@@ -3,6 +3,7 @@ import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
 import { Gallery } from "../elements/Gallery";
+import { ServicesOptions } from "../elements/Gallery/imageSets";
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -11,7 +12,7 @@ const propTypes = {
 const defaultProps = {
   ...SectionTilesProps.defaults,
 };
-const FeaturesTiles = ({
+const OurServices = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -41,13 +42,13 @@ const FeaturesTiles = ({
     <section {...props} className={outerClasses} id="services-scroll">
       <div className="container">
         <SectionHeader data={sectionHeader} className="center-content" />
-        <Gallery />
+        <Gallery imageSet={ServicesOptions} />
       </div>
     </section>
   );
 };
 
-FeaturesTiles.propTypes = propTypes;
-FeaturesTiles.defaultProps = defaultProps;
+OurServices.propTypes = propTypes;
+OurServices.defaultProps = defaultProps;
 
-export default FeaturesTiles;
+export default OurServices;
