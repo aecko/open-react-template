@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import DropdownMenu, {
-  DropdownItem,
-  DropdownItemGroup,
-} from "@atlaskit/dropdown-menu";
+import DropdownMenu, { DropdownItem } from "@atlaskit/dropdown-menu";
 
 export const Dropdown = ({ title, options, dropDownRight }) => {
   const [isOpen, setIsOpen] = useState(false);

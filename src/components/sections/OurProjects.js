@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import SectionHeader from "./partials/SectionHeader";
-import { useMediaQuery } from "../../hooks/MediaHook";
 import { Gallery } from "../elements/Gallery";
 import { ProjectsOptions } from "../elements/Gallery/imageSets";
 

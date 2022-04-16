@@ -140,6 +140,20 @@ const Header = ({
                     <li>
                       <Link
                         onClick={() => {
+                          anchorServices.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center",
+                            inline: "center",
+                          });
+                          closeMenu();
+                        }}
+                      >
+                        Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        onClick={() => {
                           anchor.scrollIntoView({
                             behavior: "smooth",
                             block: "center",
