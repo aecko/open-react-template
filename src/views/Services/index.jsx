@@ -2,7 +2,16 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { ProductList } from "../../components/elements/ProductList";
 import { ServiceInfo } from "./servicesInfo";
-import { StyledRowContainer } from "./styles";
+import {
+  ColumnContainer,
+  NavigationInfoContainer,
+  ScreenWrapper,
+  StyledHeadline,
+  StyledNavigationText,
+  StyledParagraphText,
+  StyledRowContainer,
+  StyledSubHeadline,
+} from "./styles";
 
 export const Services = () => {
   const serviceId = useParams().id;
@@ -18,14 +27,24 @@ export const Services = () => {
   }, [serviceId]);
 
   return (
-    <StyledRowContainer>
-      {service?.products && <ProductList products={service?.products} />}
-      <div>
-        <h1>Services</h1>
-        <h2>{service?.title}</h2>
-        <h3>{service?.summary}</h3>
-        <p>{service?.description}</p>
-      </div>
-    </StyledRowContainer>
+    <ScreenWrapper>
+      <ColumnContainer>
+        <StyledHeadline>{service?.title}</StyledHeadline>
+        <NavigationInfoContainer>
+          <StyledNavigationText>Home</StyledNavigationText>
+          <StyledNavigationText>{">"}</StyledNavigationText>
+          <StyledNavigationText>Services</StyledNavigationText>
+          <StyledNavigationText>{">"}</StyledNavigationText>
+          <StyledNavigationText>{service?.title}</StyledNavigationText>
+        </NavigationInfoContainer>
+      </ColumnContainer>
+      <StyledRowContainer>
+        {service?.products && <ProductList products={service?.products} />}
+        <div>
+          <StyledSubHeadline>{service?.summary}</StyledSubHeadline>
+          <StyledParagraphText>{service?.description}</StyledParagraphText>
+        </div>
+      </StyledRowContainer>
+    </ScreenWrapper>
   );
 };
