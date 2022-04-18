@@ -1,10 +1,16 @@
 import React from "react";
-import { ProductWrapper, StyledHeadline, StyledProductList } from "./styles";
+import {
+  ProductWrapper,
+  SmallLineSeparator,
+  StyledHeadline,
+  StyledProductList,
+} from "./styles";
 
 export const ProductList = ({ products }) => {
   return (
     <ProductWrapper>
       <StyledHeadline>Products</StyledHeadline>
+      <SmallLineSeparator />
       {products !== undefined && (
         <StyledProductList>
           {products?.map((product) => (

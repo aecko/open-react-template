@@ -8,12 +8,12 @@ import {
   ScreenWrapper,
   StyledHeadline,
   StyledNavigationText,
-  StyledParagraphText,
   StyledRowContainer,
   StyledSubHeadline,
 } from "./styles";
 
 export const Services = () => {
+  const paragraphText = (text) => text.split("\n").map((str) => <p>{str}</p>);
   const serviceId = useParams().id;
   const [service, setService] = React.useState(null);
   console.log(service);
@@ -42,7 +42,7 @@ export const Services = () => {
         {service?.products && <ProductList products={service?.products} />}
         <div>
           <StyledSubHeadline>{service?.summary}</StyledSubHeadline>
-          <StyledParagraphText>{service?.description}</StyledParagraphText>
+          {service?.description && paragraphText(service?.description)}
         </div>
       </StyledRowContainer>
     </ScreenWrapper>
