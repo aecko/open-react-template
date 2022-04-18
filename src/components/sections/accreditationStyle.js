@@ -7,5 +7,5 @@ export const ColumnList = styled.div`
   grid-gap: 0.5rem;
   align-items: center;
   background-color: "blue";
-  margin-bottom: 2em;
+  margin-bottom: ${(props) => (props.noMargin ? "0" : "2em")};
 `;

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 import Image from "../../elements/Image";
 
-const Logo = ({ className, ...props }) => {
+const Logo = ({ className, width = 200, height = 48, ...props }) => {
   const classes = classNames("brand", className);
 
   return (
@@ -13,8 +13,8 @@ const Logo = ({ className, ...props }) => {
           <Image
             src={require("./../../../assets/images/Ambar_Logo_Full.png")}
             alt="Logo"
-            width={200}
-            height={48}
+            width={width}
+            height={height}
           />
         </Link>
       </h1>
