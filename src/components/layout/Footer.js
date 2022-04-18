@@ -84,6 +84,20 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
           </div>
         </div>
       </footer>
+      <div
+        style={{
+          width: "100%",
+          backgroundColor: "#FE830D",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <p style={{ fontSize: "1em", color: "#fff", marginTop: "0.5em" }}>
+          © 2022 Ambar Systems
+        </p>
+      </div>
     </>
   );
 };

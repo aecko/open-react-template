@@ -20,6 +20,8 @@ const Accreditations = ({
   hasBgColor,
   invertColor,
   pushLeft,
+  noMargin = false,
+  noDelay = false,
   ...props
 }) => {
   const outerClasses = classNames(
@@ -34,10 +36,12 @@ const Accreditations = ({
   return (
     <section {...props} className={outerClasses}>
       <div
-        className="container reveal-from-bottom center-content"
-        data-reveal-delay="350"
+        className={`container ${
+          !noDelay && "reveal-from-bottom"
+        } center-content`}
+        data-reveal-delay="300"
       >
-        <ColumnList itemSize="150px">
+        <ColumnList itemSize="150px" noMargin={noMargin}>
           <Image
             src={require("./../../assets/images/awards/salto.png")}
             alt="Salto Accreditation"
@@ -59,9 +63,19 @@ const Accreditations = ({
           />
 
           <Image
+            src={require("./../../assets/images/awards/fire-detection.jpg")}
+            alt="Fire Detection Accreditation"
+            width={110}
+            style={{
+              borderRadius: "2px",
+              marginBottom: "1em",
+            }}
+          />
+
+          <Image
             src={require("./../../assets/images/awards/nsv.jpg")}
             alt="NSV Accreditation"
-            width={50}
+            width={120}
             style={{
               borderRadius: "2px",
               marginBottom: "1em",
