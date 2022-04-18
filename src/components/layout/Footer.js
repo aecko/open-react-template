@@ -24,49 +24,72 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
   );
 
   return (
-    <footer {...props} className={classes}>
-      <div className="container">
-        <div
-          className={classNames(
-            "site-footer-inner",
-            topDivider && "has-top-divider"
-          )}
-        >
-          <div className="footer-top space-between text-xxs">
-            <Logo width={350} height={70} />
-            <FooterSocial />
-          </div>
+    <>
+      <footer
+        {...props}
+        className={classes}
+        style={{
+          backgroundColor: "#efefef",
+          marginTop: "1em",
+        }}
+      >
+        <div className="container">
           <div
-            className="text-xs"
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-            }}
+            className={classNames(
+              "site-footer-inner",
+              topDivider && "has-top-divider"
+            )}
           >
-            <p style={{ flex: 1 }}>
-              {
-                "A full suite of products and services including Fire Alarm & Security Systems, Fire Suppression, Energy Monitoring & Renewable Solutions and Assistive Technologies"
-              }
-            </p>
-            <ul style={{ flex: 1, textAlign: "right", listStyle: "none" }}>
-              <li>📞 028 7963 9446</li>
-              <li>📧 contact@ambarsystems.com</li>
-            </ul>
-          </div>
-          <div>
-            <h4 style={{ margin: 0, marginBottom: "1em" }}>Accreditation</h4>
-            <Accreditations noMargin noDelay />
-          </div>
-          <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <FooterNav />
-            <div className="footer-copyright">
-              Website by <a href="https://github.com/aecko">Seamus Harkin</a>.
+            <div className="footer-top space-between text-xxs">
+              <Logo width={350} height={70} />
+              <FooterSocial />
+            </div>
+            <div
+              className="text-xs"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                width: "100%",
+              }}
+            >
+              <p style={{ flex: 1 }}>
+                {
+                  "A full suite of products and services including Fire Alarm & Security Systems, Fire Suppression, Energy Monitoring & Renewable Solutions and Assistive Technologies"
+                }
+              </p>
+              <ul style={{ flex: 1, textAlign: "right", listStyle: "none" }}>
+                <li>📞 028 7963 9446</li>
+                <li>📧 contact@ambarsystems.com</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style={{ margin: 0, marginBottom: "1em" }}>Accreditation</h4>
+              <Accreditations noMargin noDelay />
+            </div>
+            <div className="footer-bottom space-between text-xxs invert-order-desktop">
+              <FooterNav />
+              <div className="footer-copyright">
+                Website by <a href="https://github.com/aecko">Seamus Harkin</a>.
+              </div>
             </div>
           </div>
         </div>
+      </footer>
+      <div
+        style={{
+          width: "100%",
+          backgroundColor: "#FE830D",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <p style={{ fontSize: "1em", color: "#fff", marginTop: "0.5em" }}>
+          © 2022 Ambar Systems
+        </p>
       </div>
-    </footer>
+    </>
   );
 };
 

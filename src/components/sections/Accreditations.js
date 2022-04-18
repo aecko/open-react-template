@@ -36,8 +36,10 @@ const Accreditations = ({
   return (
     <section {...props} className={outerClasses}>
       <div
-        className="container reveal-from-bottom center-content"
-        data-reveal-delay={noDelay ? 0 : 300}
+        className={`container ${
+          !noDelay && "reveal-from-bottom"
+        } center-content`}
+        data-reveal-delay="300"
       >
         <ColumnList itemSize="150px" noMargin={noMargin}>
           <Image
