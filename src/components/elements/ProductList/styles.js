@@ -5,7 +5,7 @@ export const ProductWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 1em;
+  padding: 0.5em 2em;
   gap: 0.3em;
   border-width: 2px;
   border-style: solid;
@@ -14,4 +14,12 @@ export const ProductWrapper = styled.div`
 
 export const StyledProductList = styled.div`
   list-style: none;
+`;
+
+export const StyledHeadline = styled.h2`
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5em;
+  margin-top: 0;
 `;

@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { ProductList } from "../../components/elements/ProductList";
 import { ServiceInfo } from "./servicesInfo";
+import { StyledRowContainer } from "./styles";
 
 export const Services = () => {
   const serviceId = useParams().id;
@@ -17,12 +18,14 @@ export const Services = () => {
   }, [serviceId]);
 
   return (
-    <div>
-      <h1>Services</h1>
-      <h2>{service?.title}</h2>
-      <h3>{service?.summary}</h3>
-      <p>{service?.description}</p>
+    <StyledRowContainer>
       {service?.products && <ProductList products={service?.products} />}
-    </div>
+      <div>
+        <h1>Services</h1>
+        <h2>{service?.title}</h2>
+        <h3>{service?.summary}</h3>
+        <p>{service?.description}</p>
+      </div>
+    </StyledRowContainer>
   );
 };
