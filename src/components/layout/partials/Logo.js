@@ -11,14 +11,10 @@ const Logo = ({ className, ...props }) => {
       <h1 className="m-0">
         <Link to="/">
           <Image
-            src={require("./../../../assets/images/AmbarLogo.svg")}
+            src={require("./../../../assets/images/Ambar_Logo_Full.png")}
             alt="Logo"
-            width={49}
+            width={200}
             height={48}
-            style={{
-              borderTopLeftRadius: "14px",
-              borderBottomLeftRadius: "14px",
-            }}
           />
         </Link>
       </h1>
