@@ -1,18 +1,18 @@
 export const DropdownOptions = [
   {
     title: "Fire Systems",
-    route: "/fire-systems",
+    route: "/services/fire-systems",
   },
   {
     title: "Refuge Systems",
-    route: "/refuge-systems",
+    route: "/services/refuge-systems",
   },
   {
     title: "Communication",
     options: [
       {
         title: "PA Systems",
-        route: "/pa-systems",
+        route: "/services/pa-systems",
       },
     ],
   },
@@ -21,19 +21,19 @@ export const DropdownOptions = [
     options: [
       {
         title: "Intruder",
-        route: "/intruder",
+        route: "/services/intruder",
       },
       {
         title: "Access Control",
-        route: "/access-control",
+        route: "/services/access-control",
       },
       {
         title: "Door Entry",
-        route: "/door-entry",
+        route: "/services/door-entry",
       },
       {
         title: "IP CCTV",
-        route: "/ip-cctv",
+        route: "/services/ip-cctv",
       },
     ],
   },
