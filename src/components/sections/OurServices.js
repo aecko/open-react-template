@@ -39,12 +39,35 @@ const OurServices = ({
   };
 
   return (
-    <section {...props} className={outerClasses} id="services-scroll">
-      <div className="container">
-        <SectionHeader data={sectionHeader} className="center-content" />
-        <Gallery imageSet={ServicesOptions} />
+    <div {...props} className={outerClasses} id="services">
+      <div>
+        <SectionHeader
+          data={sectionHeader}
+          className="center-content"
+          style={{
+            margin: 0,
+            padding: "2em 0 4em 0",
+            minWidth: "100%",
+            alignSelf: "stretch",
+            backgroundColor: "rgba(254, 131, 13, 0.7)",
+            zIndex: -20,
+            color: "white",
+          }}
+          color="#fff"
+        />
+        <div
+          className="container"
+          style={{
+            marginTop: "-2.3em",
+            backgroundColor: "#fff",
+            padding: "2em 1em",
+            boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+          }}
+        >
+          <Gallery imageSet={ServicesOptions} />
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

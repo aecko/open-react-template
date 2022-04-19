@@ -40,6 +40,12 @@ const App = () => {
           <Switch>
             <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
             <AppRoute
+              exact
+              path="/:section"
+              component={Home}
+              layout={LayoutDefault}
+            />
+            <AppRoute
               path="/services/:id"
               component={Services}
               layout={LayoutDefault}

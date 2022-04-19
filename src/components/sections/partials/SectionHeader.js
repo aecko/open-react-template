@@ -16,7 +16,7 @@ const defaultProps = {
   tag: "h2",
 };
 
-const SectionHeader = ({ className, data, children, tag, ...props }) => {
+const SectionHeader = ({ className, data, children, tag, color, ...props }) => {
   const classes = classNames("section-header", className);
 
   const Component = tag;
@@ -28,14 +28,15 @@ const SectionHeader = ({ className, data, children, tag, ...props }) => {
           <div className="container-xs">
             {children}
             {data.title && (
-              <Component
-                className={classNames(
-                  "mt-0",
-                  data.paragraph ? "mb-16" : "mb-0"
-                )}
+              <h2
+                style={{
+                  marginTop: 0,
+                  marginBottom: data.paragraph ? "0.5em" : "0",
+                  color: color,
+                }}
               >
                 {data.title}
-              </Component>
+              </h2>
             )}
             {data.paragraph && <p className="m-0">{data.paragraph}</p>}
           </div>

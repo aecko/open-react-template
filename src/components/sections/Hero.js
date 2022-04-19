@@ -38,8 +38,8 @@ const Hero = ({
     bottomDivider && "has-bottom-divider"
   );
 
-  const anchorContact = document.querySelector("#contact-scroll");
-  const anchorCaseStudies = document.querySelector("#case-studies-scroll");
+  const anchorContact = document.querySelector("#contactUs");
+  const anchorCaseStudies = document.querySelector("#case-studies");
 
   return (
     <>

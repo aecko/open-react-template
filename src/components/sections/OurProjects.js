@@ -47,7 +47,7 @@ const OurProjects = ({
   };
 
   return (
-    <section {...props} className={outerClasses} id="case-studies-scroll">
+    <section {...props} className={outerClasses} id="projects">
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

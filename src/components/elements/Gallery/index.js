@@ -46,7 +46,7 @@ export const Gallery = ({ imageSet, uniform = true, withOverlay = true }) => {
   return (
     <>
       {uniform ? (
-        <UniformGrid itemSize={isMobile ? "150px" : "300px"}>
+        <UniformGrid itemSize={isMobile ? "75px" : "150px"}>
           {getImages()}
         </UniformGrid>
       ) : (

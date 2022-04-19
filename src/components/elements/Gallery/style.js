@@ -14,17 +14,16 @@ export const ImageOverlayWrapper = styled.div`
     cursor: pointer;
   }
   z-index: 1;
-  margin-bottom: 1em;
 `;
 
 export const UniformGrid = styled.div`
   display: grid;
   grid-template-columns: ${(props) =>
     `repeat(auto-fit, minmax(${props.itemSize}, 1fr))`};
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
   align-items: flex-start;
   background-color: "blue";
-  margin-bottom: 2em;
+  padding: 1em;
 `;
 
 export const ImageGrid = styled.div`

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Logo from "./partials/Logo";
 import { Dropdown } from "../elements/Dropdown";
 import { DropdownOptions } from "../elements/Dropdown/options";
@@ -35,6 +35,8 @@ const Header = ({
 
   const nav = useRef(null);
   const hamburger = useRef(null);
+
+  const history = useHistory();
 
   useEffect(() => {
     isActive && openMenu();
@@ -79,10 +81,6 @@ const Header = ({
     bottomOuterDivider && "has-bottom-divider",
     className
   );
-
-  const anchor = document.querySelector("#case-studies-scroll");
-  const anchorServices = document.querySelector("#services-scroll");
-  const anchorContact = document.querySelector("#contact-scroll");
 
   return (
     <header
@@ -129,6 +127,7 @@ const Header = ({
                       <Link
                         onClick={() => {
                           closeMenu();
+                          history.push("/home");
                         }}
                       >
                         Home
@@ -140,11 +139,7 @@ const Header = ({
                     <li>
                       <Link
                         onClick={() => {
-                          anchorServices.scrollIntoView({
-                            behavior: "smooth",
-                            block: "center",
-                            inline: "center",
-                          });
+                          history.push("/services");
                           closeMenu();
                         }}
                       >
@@ -154,11 +149,7 @@ const Header = ({
                     <li>
                       <Link
                         onClick={() => {
-                          anchor.scrollIntoView({
-                            behavior: "smooth",
-                            block: "center",
-                            inline: "center",
-                          });
+                          history.push("/projects");
                           closeMenu();
                         }}
                       >
@@ -174,10 +165,8 @@ const Header = ({
                           to="#0"
                           className="button button-primary button-wide-mobile button-sm"
                           onClick={() => {
-                            anchorContact.scrollIntoView({
-                              behavior: "smooth",
-                              block: "center",
-                            });
+                            history.push("/contactUs");
+                            closeMenu();
                           }}
                         >
                           Contact Us

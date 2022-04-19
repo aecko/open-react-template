@@ -7,11 +7,24 @@ import Accreditations from "../components/sections/Accreditations";
 import { FullScreenWrapper } from "./styles";
 import { useMediaQuery } from "../hooks/MediaHook";
 import OurServices from "../components/sections/OurServices";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react/cjs/react.development";
 
 const Home = () => {
   const isMobile = useMediaQuery();
+  const sectionId = useParams()?.section;
+
+  useEffect(() => {
+    if (!sectionId) return;
+    document.querySelector(`#${sectionId}`).scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }, [sectionId]);
+
   return (
-    <>
+    <div id="home">
       <FullScreenWrapper>
         <Hero className="illustration-section-01" />
         <div style={{ marginTop: isMobile ? "-1em" : "2em" }}>
@@ -21,7 +34,7 @@ const Home = () => {
       <OurServices className="illustration-section-03" />
       <OurProjects topDivider />
       <ContactForm split />
-    </>
+    </div>
   );
 };
 
