@@ -32,7 +32,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
         {...props}
         className={classes}
         style={{
-          backgroundColor: "#efefef",
+          backgroundColor: "#d6dbdf",
           marginTop: "1em",
         }}
       >
