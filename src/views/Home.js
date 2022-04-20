@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import sections
 import Hero from "../components/sections/Hero";
 import OurProjects from "../components/sections/OurProjects";
@@ -8,7 +8,6 @@ import { FullScreenWrapper } from "./styles";
 import { useMediaQuery } from "../hooks/MediaHook";
 import OurServices from "../components/sections/OurServices";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
 
 const Home = () => {
   const isMobile = useMediaQuery();
