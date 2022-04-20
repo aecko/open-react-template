@@ -67,7 +67,9 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
                   listStyle: "none",
                 }}
               >
+                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
                 <li>📞 028 7963 9446</li>
+                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
                 <li>📧 contact@ambarsystems.com</li>
               </ul>
             </div>

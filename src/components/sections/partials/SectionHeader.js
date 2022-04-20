@@ -19,8 +19,6 @@ const defaultProps = {
 const SectionHeader = ({ className, data, children, tag, color, ...props }) => {
   const classes = classNames("section-header", className);
 
-  const Component = tag;
-
   return (
     <>
       {(data.title || data.paragraph) && (
