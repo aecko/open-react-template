@@ -27,7 +27,7 @@ export const Services = () => {
   }, [serviceId]);
 
   return (
-    <ScreenWrapper>
+    <>
       <ColumnContainer>
         <StyledHeadline>{service?.title}</StyledHeadline>
         <NavigationInfoContainer>
@@ -38,13 +38,15 @@ export const Services = () => {
           <StyledNavigationText>{service?.title}</StyledNavigationText>
         </NavigationInfoContainer>
       </ColumnContainer>
-      <StyledRowContainer>
-        {service?.products && <ProductList products={service?.products} />}
-        <div>
-          <StyledSubHeadline>{service?.summary}</StyledSubHeadline>
-          {service?.description && paragraphText(service?.description)}
-        </div>
-      </StyledRowContainer>
-    </ScreenWrapper>
+      <ScreenWrapper>
+        <StyledRowContainer>
+          {service?.products && <ProductList products={service?.products} />}
+          <div>
+            <StyledSubHeadline>{service?.summary}</StyledSubHeadline>
+            {service?.description && paragraphText(service?.description)}
+          </div>
+        </StyledRowContainer>
+      </ScreenWrapper>
+    </>
   );
 };

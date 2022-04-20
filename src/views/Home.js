@@ -17,14 +17,14 @@ const Home = () => {
     if (!sectionId) return;
     document.querySelector(`#${sectionId}`).scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "center",
       inline: "nearest",
     });
   }, [sectionId]);
 
   return (
-    <div id="home">
-      <FullScreenWrapper>
+    <div>
+      <FullScreenWrapper id="home">
         <Hero className="illustration-section-01" />
         <div style={{ marginTop: isMobile ? "-1em" : "2em" }}>
           <Accreditations />
