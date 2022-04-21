@@ -8,6 +8,7 @@ export const DropdownItemWrapper = styled.div`
   font-size: 0.8em;
   cursor: pointer;
   align-self: stretch;
+  color: #000;
   &:hover {
     background-color: #f5f5f5;
   }

@@ -33,8 +33,9 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
         className={classes}
         style={{
           backgroundColor: "#fbfcfc",
+          color: "#000",
           marginTop: "1em",
-          boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.2)",
+          boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.5)",
         }}
       >
         <div className="container">
@@ -81,7 +82,11 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
             <div className="footer-bottom space-between text-xxs invert-order-desktop">
               <FooterNav />
               <div className="footer-copyright">
-                Website by <a href="https://github.com/aecko">Seamus Harkin</a>.
+                Website by{" "}
+                <a style={{ color: "#000" }} href="https://github.com/aecko">
+                  Seamus Harkin
+                </a>
+                .
               </div>
             </div>
           </div>

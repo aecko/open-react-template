@@ -18,7 +18,12 @@ export const Dropdown = ({ title, options, dropDownRight }) => {
           <Link
             ref={triggerRef}
             {...props}
-            style={{ display: "flex", flexDirection: "row", gap: "0.3em" }}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "0.3em",
+              color: "#000",
+            }}
           >
             {title} {isOpen ? <VscChevronUp /> : <VscChevronDown />}
           </Link>
@@ -46,6 +51,7 @@ export const Dropdown = ({ title, options, dropDownRight }) => {
                     //TODO: use react-router instead
                     window.location.href = option.route;
                   }}
+                  style={{ color: "#000" }}
                 >
                   {option.title}
                 </div>

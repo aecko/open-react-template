@@ -43,23 +43,12 @@ const Hero = ({
 
   return (
     <>
-      <img
-        src={require("../../assets/images/Banner.jpg")}
-        alt="banner"
-        style={{
-          minWidth: "100%",
-          height: "100vh",
-          opacity: "0.5",
-          position: "absolute",
-          zIndex: "-1000",
-        }}
-      />
       <section {...props} className={outerClasses}>
         <div className="container-sm">
           <div className={innerClasses}>
             <div className="hero-content pull-left">
               <Image
-                src={require("../../assets/images/Ambar_Logo_Full.png")}
+                src={require("../../assets/images/logoHero.png")}
                 alt="Full Logo"
                 width={400}
                 height={140}

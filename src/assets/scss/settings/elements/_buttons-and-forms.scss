@@ -65,7 +65,7 @@ $button-loading--thickness: 2px; // button loading spinner, stroke width (.butto
 // Forms: color
 $form--color: (
   input: get-color(dark, 1),
-  input-placeholder: get-color(dark, 2),
+  input-placeholder: get-color(light, 1),
   label: get-color(light, 3),
   check-radio: get-color(light, 2),
   // ↓ Inverted colors

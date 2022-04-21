@@ -125,6 +125,9 @@ const Header = ({
                   >
                     <li>
                       <Link
+                        style={{
+                          color: "#000",
+                        }}
                         onClick={() => {
                           closeMenu();
                           history.push("/home");
@@ -142,6 +145,9 @@ const Header = ({
                           history.push("/services");
                           closeMenu();
                         }}
+                        style={{
+                          color: "#000",
+                        }}
                       >
                         Services
                       </Link>
@@ -151,6 +157,9 @@ const Header = ({
                         onClick={() => {
                           history.push("/projects");
                           closeMenu();
+                        }}
+                        style={{
+                          color: "#000",
                         }}
                       >
                         Projects

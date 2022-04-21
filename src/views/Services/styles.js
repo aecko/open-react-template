@@ -48,7 +48,7 @@ export const StyledHeadline = styled.h2`
 export const StyledSubHeadline = styled.h3`
   font-size: 1.2em;
   font-weight: bold;
-  color: #000;
+  color: #fff;
   margin: 0;
   margin-bottom: 0.5em;
 `;
