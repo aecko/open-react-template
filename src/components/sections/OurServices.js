@@ -33,9 +33,9 @@ const OurServices = ({
   );
 
   const sectionHeader = {
-    title: "Services",
+    title: "Products and Services",
     paragraph:
-      "At Ambar Systems we offer a wide range of services to our clients.",
+      "At Ambar Systems we offer a wide range of products and services to our clients.",
   };
 
   return (

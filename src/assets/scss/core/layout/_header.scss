@@ -25,7 +25,7 @@
 
 .header-nav {
   flex-grow: 1;
-
+  padding-right: 0;
   .header-nav-inner {
     display: flex;
     flex-grow: 1;
@@ -54,7 +54,7 @@
     @include anchor-aspect(header);
     @include font-weight(header-link);
     text-transform: $link-header--transform;
-    padding: 0 $header-nav--padding-h;
+    padding: 0 $header-nav--padding-h/2;
 
     .invert-color & {
       @include anchor-aspect(header, inverse);

@@ -42,9 +42,11 @@ const Home = () => {
       */}
       <FullScreenWrapper id="home" style={{ paddingTop: "4em" }}>
         <Hero />
-        <div style={{ marginTop: isMobile ? "-1em" : "2em" }}>
-          <Accreditations noDelay />
-        </div>
+        {false && (
+          <div style={{ marginTop: isMobile ? "-1em" : "2em" }}>
+            <Accreditations noDelay />
+          </div>
+        )}
       </FullScreenWrapper>
       <OurServices className="illustration-section-03" />
       <OurProjects topDivider />

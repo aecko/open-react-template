@@ -13,8 +13,8 @@ const Logo = ({ className, width = 200, height = 48, ...props }) => {
           <Image
             src={require("./../../../assets/images/Ambar_Logo_Full.png")}
             alt="Logo"
-            width={width}
-            height={height}
+            width="90%"
+            height="90%"
           />
         </Link>
       </h1>

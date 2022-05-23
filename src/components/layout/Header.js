@@ -92,7 +92,7 @@ const Header = ({
         zIndex: 100,
       }}
     >
-      <div className="container">
+      <div style={{ width: "100%", paddingRight: "2em", paddingLeft: "2em" }}>
         <div
           className={classNames(
             "site-header-inner",
@@ -149,7 +149,20 @@ const Header = ({
                           color: "#000",
                         }}
                       >
-                        Services
+                        Products & Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        onClick={() => {
+                          history.push("/accreditation");
+                          closeMenu();
+                        }}
+                        style={{
+                          color: "#000",
+                        }}
+                      >
+                        Accreditation
                       </Link>
                     </li>
                     <li>
