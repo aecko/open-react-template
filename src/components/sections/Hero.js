@@ -46,6 +46,24 @@ const Hero = ({
     <>
       <section {...props} className={outerClasses}>
         <div className="container-sm">
+          <Image
+            src={require("../../assets/images/ambar_outside.jpg")}
+            alt="Full Logo"
+            width={400}
+            height={140}
+            style={{
+              borderRadius: "5px",
+              position: "absolute",
+              zIndex: "-10",
+              width: "100vw",
+              height: "100vh",
+              left: 0,
+              top: 0,
+              opacity: "1",
+              "-webkit-filter": "brightness(45%)",
+            }}
+            className="mb-32"
+          />
           <div className={innerClasses}>
             <div className="hero-content pull-left">
               <Image
