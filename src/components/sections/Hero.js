@@ -4,6 +4,7 @@ import { SectionProps } from "../../utils/SectionProps";
 import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
+import { useHistory } from "react-router-dom";
 
 const propTypes = {
   ...SectionProps.types,
@@ -39,7 +40,7 @@ const Hero = ({
   );
 
   const anchorContact = document.querySelector("#contactUs");
-  const anchorCaseStudies = document.querySelector("#case-studies");
+  const history = useHistory();
 
   return (
     <>
@@ -85,10 +86,7 @@ const Hero = ({
                       color="dark"
                       wideMobile
                       onClick={() => {
-                        anchorCaseStudies.scrollIntoView({
-                          behavior: "smooth",
-                          block: "center",
-                        });
+                        history.push("/projects");
                       }}
                     >
                       Our Projects

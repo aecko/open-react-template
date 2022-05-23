@@ -49,7 +49,7 @@ const OurServices = ({
             padding: "2em 0 4em 0",
             minWidth: "100%",
             alignSelf: "stretch",
-            backgroundColor: "rgba(254, 131, 13, 0.7)",
+            backgroundColor: "rgba(254, 131, 13, 0.85)",
             zIndex: -20,
             color: "white",
           }}

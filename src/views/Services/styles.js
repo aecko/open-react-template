@@ -31,8 +31,8 @@ export const ColumnContainer = styled.div`
   justify-content: flex-start;
   width: 100%;
   padding-left: 1em;
-  border-left: 8px solid #000;
-  background-color: rgba(254, 131, 13, 0.7);
+  border-left: 8px solid #fff;
+  background-color: rgba(254, 131, 13, 0.85);
   margin-top: 7em;
   padding: 1.5em 10em;
 `;

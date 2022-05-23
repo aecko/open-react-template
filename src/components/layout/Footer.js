@@ -59,7 +59,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
             >
               <p style={{ flex: 1 }}>
                 {
-                  "A full suite of products and services including Fire Alarm & Security Systems, Fire Suppression, Energy Monitoring & Renewable Solutions and Assistive Technologies"
+                  "A full suite of products and services including Fire Alarm & Security Systems, Fire Suppression, Door Access & Intruder Security and Refuge Systems."
                 }
               </p>
               <ul

@@ -58,10 +58,10 @@ const OurProjects = ({
               padding: "2em 0 4em 0",
               minWidth: "100%",
               alignSelf: "stretch",
-              backgroundColor: "rgba(254, 131, 13, 0.7)",
+              backgroundColor: "rgba(254, 131, 13, 0.85)",
               zIndex: -20,
               color: "white",
-              boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+              boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)",
             }}
             color="#fff"
           />
@@ -70,7 +70,7 @@ const OurProjects = ({
               marginTop: "-2.3em",
               backgroundColor: "#191515",
               padding: "2em 1em",
-              boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+              boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)",
             }}
           >
             <Gallery
