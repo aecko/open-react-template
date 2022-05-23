@@ -24,6 +24,7 @@ const Home = () => {
 
   return (
     <div>
+      {/* }
       <img
         src={require("../assets/images/illustration-section-01.svg")}
         style={{
@@ -38,6 +39,7 @@ const Home = () => {
         }}
         alt="Design"
       />
+      */}
       <FullScreenWrapper id="home" style={{ paddingTop: "4em" }}>
         <Hero />
         <div style={{ marginTop: isMobile ? "-1em" : "2em" }}>

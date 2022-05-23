@@ -60,7 +60,7 @@ const Hero = ({
               left: 0,
               top: 0,
               opacity: "1",
-              "-webkit-filter": "brightness(45%)",
+              "-webkit-filter": "brightness(35%)",
             }}
             className="mb-32"
           />
