@@ -11,6 +11,7 @@ import LayoutDefault from "./layouts/LayoutDefault";
 import Home from "./views/Home";
 import { ThemeProvider } from "./contexts/ThemeProvider";
 import { Services } from "./views/Services";
+import { AccreditationPage } from "./views/Accreditation";
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -39,6 +40,12 @@ const App = () => {
         children={() => (
           <Switch>
             <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+            <AppRoute
+              exact
+              path="/accreditation"
+              component={AccreditationPage}
+              layout={LayoutDefault}
+            />
             <AppRoute
               exact
               path="/:section"
