@@ -16,7 +16,7 @@ export const DropdownOptions = [
     route: "/services/pa-systems",
   },
   {
-    title: "IPVS Systems",
+    title: "IPVS",
     route: "/services/ip-vs",
   },
 ];

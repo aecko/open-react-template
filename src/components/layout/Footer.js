@@ -47,7 +47,20 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
           >
             <div className="footer-top space-between text-xxs">
               <Logo width={350} height={70} />
-              <FooterSocial />
+              <ul
+                style={{
+                  flex: 1,
+                  textAlign: isMobile ? "center" : "right",
+                  listStyle: "none",
+                  marginTop: "30px",
+                }}
+              >
+                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+                <li>📞 028 7963 9446</li>
+                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
+                <li>📧 admin@ambarsystems.com</li>
+              </ul>
+              {false && <FooterSocial />}
             </div>
             <div
               className="text-xs"
@@ -57,26 +70,6 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
                 width: "100%",
               }}
             >
-              <p style={{ flex: 1 }}>
-                {
-                  "A full suite of products and services including Fire Alarm & Security Systems, Fire Suppression, Door Access & Intruder Security and Refuge Systems."
-                }
-              </p>
-              <ul
-                style={{
-                  flex: 1,
-                  textAlign: isMobile ? "center" : "right",
-                  listStyle: "none",
-                }}
-              >
-                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-                <li>📞 028 7963 9446</li>
-                {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-                <li>📧 contact@ambarsystems.com</li>
-              </ul>
-            </div>
-            <div>
-              <h4 style={{ margin: 0, marginBottom: "1em" }}>Accreditation</h4>
               <Accreditations noMargin noDelay />
             </div>
             <div className="footer-bottom space-between text-xxs invert-order-desktop">

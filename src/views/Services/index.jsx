@@ -1,5 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Dropdown } from "../../components/elements/Dropdown";
+import { DropdownOptions } from "../../components/elements/Dropdown/options";
+import Image from "../../components/elements/Image";
 import { ProductList } from "../../components/elements/ProductList";
 import { ServiceInfo } from "./servicesInfo";
 import {
@@ -35,12 +38,25 @@ export const Services = () => {
           <StyledNavigationText>{">"}</StyledNavigationText>
           <StyledNavigationText>Services</StyledNavigationText>
           <StyledNavigationText>{">"}</StyledNavigationText>
-          <StyledNavigationText>{service?.title}</StyledNavigationText>
+          <div>
+            <Dropdown title={service?.title} options={DropdownOptions} />
+          </div>
         </NavigationInfoContainer>
       </ColumnContainer>
       <ScreenWrapper>
         <StyledRowContainer>
-          {service?.products && <ProductList products={service?.products} />}
+          {false && service?.products && (
+            <ProductList products={service?.products} />
+          )}
+
+          {service?.image && (
+            <Image
+              src={service?.image.src}
+              alt={service?.image.alt}
+              style={{ alignSelf: "center" }}
+            />
+          )}
+
           <div>
             <StyledSubHeadline>{service?.summary}</StyledSubHeadline>
             {service?.description && paragraphText(service?.description)}

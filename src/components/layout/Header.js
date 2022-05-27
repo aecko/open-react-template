@@ -5,6 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 import Logo from "./partials/Logo";
 import { Dropdown } from "../elements/Dropdown";
 import { DropdownOptions } from "../elements/Dropdown/options";
+import { StyledLi } from "./Header_Styles";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -123,7 +124,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}
                   >
-                    <li>
+                    <StyledLi>
                       <Link
                         style={{
                           color: "#000",
@@ -135,11 +136,17 @@ const Header = ({
                       >
                         Home
                       </Link>
-                    </li>
-                    <li>
-                      <Dropdown title="Disciplines" options={DropdownOptions} />
-                    </li>
-                    <li>
+                    </StyledLi>
+                    {false && (
+                      <li>
+                        <Dropdown
+                          title="Disciplines"
+                          options={DropdownOptions}
+                        />
+                      </li>
+                    )}
+
+                    <StyledLi>
                       <Link
                         onClick={() => {
                           history.push("/services");
@@ -151,21 +158,8 @@ const Header = ({
                       >
                         Products & Services
                       </Link>
-                    </li>
-                    <li>
-                      <Link
-                        onClick={() => {
-                          history.push("/accreditation");
-                          closeMenu();
-                        }}
-                        style={{
-                          color: "#000",
-                        }}
-                      >
-                        Accreditation
-                      </Link>
-                    </li>
-                    <li>
+                    </StyledLi>
+                    <StyledLi>
                       <Link
                         onClick={() => {
                           history.push("/projects");
@@ -177,7 +171,20 @@ const Header = ({
                       >
                         Projects
                       </Link>
-                    </li>
+                    </StyledLi>
+                    <StyledLi>
+                      <Link
+                        onClick={() => {
+                          history.push("/accreditation");
+                          closeMenu();
+                        }}
+                        style={{
+                          color: "#000",
+                        }}
+                      >
+                        Accreditation
+                      </Link>
+                    </StyledLi>
                   </ul>
 
                   {!hideSignin && (

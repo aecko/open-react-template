@@ -1,33 +1,33 @@
 export const ServicesOptions = [
   {
-    title: "Fire Systems",
+    title: "Life Systems",
     imgSrc: require("./../../../assets/images/weOffer/fire.jpg"),
     position: "left",
+    route: "/services/life-systems",
   },
   {
-    title: "Security",
+    title: "Intruder",
     imgSrc: require("./../../../assets/images/weOffer/security.jpg"),
     position: "top",
+    route: "/services/intruder",
   },
   {
     title: "Access Control",
     imgSrc: require("./../../../assets/images/weOffer/access.jpg"),
     position: "right",
+    route: "/services/access-control",
   },
   {
-    title: "Intruder Alarms",
-    imgSrc: require("./../../../assets/images/weOffer/intruder.jpg"),
-    position: "left",
-  },
-  {
-    title: "CCTV",
+    title: "IPVS",
     imgSrc: require("./../../../assets/images/weOffer/cctv.jpg"),
     position: "bottom",
+    route: "/services/ip-vs",
   },
   {
     title: "PA Systems",
     imgSrc: require("./../../../assets/images/weOffer/pa_systems.jpg"),
     position: "right",
+    route: "/services/pa-systems",
   },
 ];
 

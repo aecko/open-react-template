@@ -1,6 +1,7 @@
 import React from "react";
 import { ImgOverlay } from "image-overlay-react";
 import "image-overlay-react/dist/index.css";
+import { useHistory } from "react-router-dom";
 import {
   FloatingTextContainer,
   ImageGrid,
@@ -15,11 +16,17 @@ import { useMediaQuery } from "../../../hooks/MediaHook";
 
 export const Gallery = ({ imageSet, uniform = true, withOverlay = true }) => {
   const isMobile = useMediaQuery();
+  const history = useHistory();
   const getImages = () =>
     imageSet.map((item, index) => (
       <>
         {withOverlay && (
-          <ImageOverlayWrapper key={index}>
+          <ImageOverlayWrapper
+            key={index}
+            onClick={() => {
+              history.push(item.route);
+            }}
+          >
             <ImgOverlay
               imgSrc={item.imgSrc}
               bgColor={colours.blackOverlay}

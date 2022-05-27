@@ -26,9 +26,14 @@ export const AccreditationPage = () => {
         </PageDescription>
       </TopHeader>
       <div style={{ padding: "0em 4em 3em 4em" }}>
-        {Accreditations.map(({ title, summary, image }, index) => (
+        {Accreditations.map(({ title, summary, image, width }, index) => (
           <SingleAccreditationContainer key={index}>
-            <AccreditationLogo src={image} alt={title} />
+            <AccreditationLogo
+              src={image}
+              alt={title}
+              width={width || "auto"}
+              height="auto"
+            />
             <AccreditationTextContainer>
               <AccreditationTitle>{title}</AccreditationTitle>
               <AccreditationDescription>{summary}</AccreditationDescription>

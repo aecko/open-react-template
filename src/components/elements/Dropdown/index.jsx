@@ -1,65 +1,28 @@
-import React, { useState } from "react";
-import DropdownMenu from "@atlaskit/dropdown-menu";
-import { Link } from "react-router-dom";
-import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
-import { DropdownItemWrapper } from "./styles";
+import React from "react";
+import { useHistory } from "react-router-dom";
+import "./dropdownStyles.css";
 
-export const Dropdown = ({ title, options, dropDownRight }) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const Dropdown = ({ title, options }) => {
+  const history = useHistory();
 
   return (
-    <div>
-      <DropdownMenu
-        isOpen={isOpen}
-        onOpenChange={(attrs) => {
-          setIsOpen(attrs.isOpen);
-        }}
-        trigger={({ triggerRef, ...props }) => (
-          <Link
-            ref={triggerRef}
-            {...props}
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              gap: "0.3em",
-              color: "#000",
-            }}
-          >
-            {title} {isOpen ? <VscChevronUp /> : <VscChevronDown />}
-          </Link>
-        )}
-        placement={dropDownRight ? "right-start" : ""}
-      >
+    <div class="dropdown">
+      <button class="dropbtn">{title} ▼</button>
+      <div class="dropdown-content">
         {options.map((option) => {
-          if (option.options) {
-            return (
-              <DropdownItemWrapper>
-                <Dropdown
-                  title={option.title}
-                  options={option.options}
-                  dropDownRight
-                />
-              </DropdownItemWrapper>
-            );
-          } else {
-            return (
-              <DropdownItemWrapper>
-                <div
-                  key={option.title}
-                  onClick={() => {
-                    //alert(`You clicked ${option.title}`);
-                    //TODO: use react-router instead
-                    window.location.href = option.route;
-                  }}
-                  style={{ color: "#000" }}
-                >
-                  {option.title}
-                </div>
-              </DropdownItemWrapper>
-            );
-          }
+          if (title === option?.title) return null;
+          return (
+            // eslint-disable-next-line jsx-a11y/anchor-is-valid
+            <a
+              style={{ color: "#000" }}
+              onClick={() => history.push(option.route)}
+              class="dropdown-item"
+            >
+              {option.title}
+            </a>
+          );
         })}
-      </DropdownMenu>
+      </div>
     </div>
   );
 };
