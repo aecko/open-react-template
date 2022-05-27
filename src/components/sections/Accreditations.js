@@ -1,5 +1,4 @@
 import React from "react";
-import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
 import Image from "../elements/Image";
 import { ColumnList } from "./accreditationStyle";
