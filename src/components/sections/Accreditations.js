@@ -74,6 +74,16 @@ const Accreditations = ({
           marginBottom: "1em",
         }}
       />
+
+      <Image
+        src={require("./../../assets/images/awards/BAFE.jpg")}
+        alt="Construction Line Accreditation"
+        width={80}
+        style={{
+          borderRadius: "2px",
+          marginBottom: "1em",
+        }}
+      />
     </ColumnList>
   );
 };

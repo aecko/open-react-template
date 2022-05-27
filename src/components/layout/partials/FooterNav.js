@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import { DropdownOptions } from "../../elements/Dropdown/options";
 
 const FooterNav = ({ className, ...props }) => {
   const classes = classNames("footer-nav", className);
@@ -8,21 +8,11 @@ const FooterNav = ({ className, ...props }) => {
   return (
     <nav {...props} className={classes}>
       <ul className="list-reset">
-        <li>
-          <Link to="#0">Fire Systems</Link>
-        </li>
-        <li>
-          <Link to="#0">Refuge Systems</Link>
-        </li>
-        <li>
-          <Link to="#0">Communication Systems</Link>
-        </li>
-        <li>
-          <Link to="#0">Security Systems</Link>
-        </li>
-        <li>
-          <Link to="#0">About us</Link>
-        </li>
+        {DropdownOptions.map(({ title, route }) => (
+          <li key={title}>
+            <a href={route}>{title}</a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

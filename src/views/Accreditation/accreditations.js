@@ -9,8 +9,7 @@ export const Accreditations = [
   {
     id: 2,
     title: "Auva",
-    summary:
-      "NSI Gold accreditation demonstrates compliance with Fire & Security industry standards in Quality Management and is BS EN 9001 compliant. NSI audits demand full compliance with all standards as well as adherence to recommended codes of best practice. Customers can have the utmost confidence in all works performed.",
+    summary: "Auva description here",
     image: require("../../assets/images/awards/auva.jpg"),
   },
   {
@@ -23,15 +22,19 @@ export const Accreditations = [
   {
     id: 4,
     title: "Fire Detection",
-    summary:
-      "NSI Gold accreditation demonstrates compliance with Fire & Security industry standards in Quality Management and is BS EN 9001 compliant. NSI audits demand full compliance with all standards as well as adherence to recommended codes of best practice. Customers can have the utmost confidence in all works performed.",
+    summary: "Fire detection certification description here",
     image: require("../../assets/images/awards/fire-detection.jpg"),
   },
   {
     id: 5,
     title: "Salto Certified",
-    summary:
-      "NSI Gold accreditation demonstrates compliance with Fire & Security industry standards in Quality Management and is BS EN 9001 compliant. NSI audits demand full compliance with all standards as well as adherence to recommended codes of best practice. Customers can have the utmost confidence in all works performed.",
+    summary: "Salto description here",
     image: require("../../assets/images/awards/salto.png"),
+  },
+  {
+    id: 6,
+    title: "BAFE Certified",
+    summary: "Bafe description",
+    image: require("../../assets/images/awards/BAFE.jpg"),
   },
 ];

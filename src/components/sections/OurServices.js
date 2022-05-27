@@ -64,7 +64,7 @@ const OurServices = ({
             boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
           }}
         >
-          <Gallery imageSet={ServicesOptions} />
+          <Gallery imageSet={ServicesOptions} uniform={true} />
         </div>
       </div>
     </div>

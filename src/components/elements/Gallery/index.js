@@ -50,6 +50,7 @@ export const Gallery = ({ imageSet, uniform = true, withOverlay = true }) => {
         )}
       </>
     ));
+
   return (
     <>
       {uniform ? (
