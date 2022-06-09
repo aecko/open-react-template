@@ -57,6 +57,17 @@ const Hero = ({ topDivider, bottomDivider }) => {
       />
       <div
         style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100vh",
+          zIndex: "-10",
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+        }}
+      />
+      <div
+        style={{
           display: "flex",
           width: "100%",
           zIndex: 100,
@@ -64,6 +75,37 @@ const Hero = ({ topDivider, bottomDivider }) => {
           alignItems: "flex-end",
         }}
       >
+        <div
+          style={{
+            position: "absolute",
+            top: "30vh",
+            left: 0,
+            paddingLeft: "10%",
+          }}
+        >
+          <h1
+            style={styles.headlineText}
+            className="reveal-from-left"
+            data-reveal-delay="200"
+          >
+            Confident designers
+          </h1>
+          <h1
+            style={styles.headlineText}
+            className="reveal-from-left"
+            data-reveal-delay="800"
+          >
+            Competent installers
+          </h1>
+          <h1
+            style={styles.headlineText}
+            className="reveal-from-left"
+            data-reveal-delay="1400"
+          >
+            Competitive specialists
+          </h1>
+        </div>
+
         <div
           style={{
             display: "flex",
@@ -140,6 +182,16 @@ Hero.propTypes = propTypes;
 Hero.defaultProps = defaultProps;
 
 export default Hero;
+
+export const styles = {
+  headlineText: {
+    fontSize: "4rem",
+    fontWeight: "bold",
+    color: "white",
+    textShadow: "0px 0px 10px black",
+    marginBottom: "1em",
+  },
+};
 
 /*
           <div

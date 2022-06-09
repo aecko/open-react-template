@@ -8,6 +8,7 @@ import { FullScreenWrapper } from "./styles";
 import { useMediaQuery } from "../hooks/MediaHook";
 import OurServices from "../components/sections/OurServices";
 import { useParams } from "react-router-dom";
+import GenericSection from "../components/sections/GenericSection";
 
 const Home = () => {
   const isMobile = useMediaQuery();
@@ -49,6 +50,7 @@ const Home = () => {
         )}
       </FullScreenWrapper>
       <OurServices className="illustration-section-03" />
+      <GenericSection></GenericSection>
       <OurProjects topDivider />
       <ContactForm split />
     </div>
