@@ -10,7 +10,14 @@ const FooterNav = ({ className, ...props }) => {
       <ul className="list-reset">
         {DropdownOptions.map(({ title, route }) => (
           <li key={title}>
-            <a href={route}>{title}</a>
+            <a
+              href={route}
+              style={{
+                color: "#F07900",
+              }}
+            >
+              {title}
+            </a>
           </li>
         ))}
       </ul>

@@ -43,7 +43,7 @@ const ContactForm = ({
   );
 
   return (
-    <section {...props} className={outerClasses} id="contactUs">
+    <section {...props} className={outerClasses} id="contact-us">
       <div className="container">
         <div className={innerClasses}>
           <div className="cta-slogan">

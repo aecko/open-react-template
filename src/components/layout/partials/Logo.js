@@ -9,7 +9,7 @@ const Logo = ({ className, width = 200, height = 48, ...props }) => {
   return (
     <div {...props} className={classes}>
       <h1 className="m-0">
-        <Link to="/">
+        <Link to="/home">
           <Image
             src={require("./../../../assets/images/Ambar_Logo_Full.png")}
             alt="Logo"

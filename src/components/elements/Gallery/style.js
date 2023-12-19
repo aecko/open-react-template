@@ -40,6 +40,18 @@ export const StyledImage = styled.img`
 
 export const FloatingTextContainer = styled.div`
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0em;
+  width: 100%;
+  height: 100%;
+  background-color: ${colours.blackOverlay};
+  z-index: 2;
+`;
+
+export const FloatingTextContainer2 = styled.div`
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -47,10 +59,22 @@ export const FloatingTextContainer = styled.div`
   background-color: ${colours.blackOverlay};
   z-index: 2;
 `;
+
 export const StyledImageWithText = styled.div`
   &:hover {
     cursor: pointer;
+    box-shadow: 0px 9px 36px 8px rgba(240, 121, 0, 0.4);
+    transform: scale(1.05, 1.05);
   }
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 1em;
+`;
+
+export const StyledImageWithTextWithoutHover = styled.div`
   position: relative;
   text-align: center;
   color: white;
@@ -58,6 +82,11 @@ export const StyledImageWithText = styled.div`
 `;
 
 export const StyledTitle = styled.h6`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
   font-size: 0.9em;
   word-wrap: break-all;
   white-space: pre-wrap;

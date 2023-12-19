@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Accreditations } from "./accreditations";
 import {
   AccreditationDescription,
-  AccreditationLogo,
+  AccreditationLogoLandscape,
+  AccreditationLogoPortrait,
+  AccreditationSectionContainer,
   AccreditationTextContainer,
   AccreditationTitle,
   PageDescription,
@@ -13,10 +15,14 @@ import {
 } from "./styles";
 
 export const AccreditationPage = () => {
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <ScreenWrapper>
       <TopHeader>
-        <PageTitle>Ambar Systems Accreditations</PageTitle>
+        <PageTitle>Our Accreditations</PageTitle>
         <PageDescription>
           Here at Ambar Systems, we invest heavily in our accreditation
           portfolio, training our team in the latest industry legislation and
@@ -25,22 +31,29 @@ export const AccreditationPage = () => {
           completed to the highest standards.
         </PageDescription>
       </TopHeader>
-      <div style={{ padding: "0em 4em 3em 4em" }}>
-        {Accreditations.map(({ title, summary, image, width }, index) => (
+      <AccreditationSectionContainer>
+        {Accreditations.map(({ title, summary, image, isPortrait }, index) => (
           <SingleAccreditationContainer key={index}>
-            <AccreditationLogo
-              src={image}
-              alt={title}
-              width={width || "auto"}
-              height="auto"
-            />
+            {isPortrait ? (
+              <AccreditationLogoPortrait
+                src={image}
+                alt={title}
+                height="auto"
+              />
+            ) : (
+              <AccreditationLogoLandscape
+                src={image}
+                alt={title}
+                height="auto"
+              />
+            )}
             <AccreditationTextContainer>
               <AccreditationTitle>{title}</AccreditationTitle>
               <AccreditationDescription>{summary}</AccreditationDescription>
             </AccreditationTextContainer>
           </SingleAccreditationContainer>
         ))}
-      </div>
+      </AccreditationSectionContainer>
     </ScreenWrapper>
   );
 };

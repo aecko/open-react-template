@@ -60,7 +60,7 @@ const OurServices = ({
           style={{
             marginTop: "-2.3em",
             backgroundColor: "#fff",
-            padding: "2em 1em",
+            padding: "2em 1em 1em 1em",
             boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.3)",
           }}
         >

@@ -47,7 +47,7 @@ const OurProjects = ({
   };
 
   return (
-    <section {...props} className={outerClasses} id="projects">
+    <section {...props} className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader
@@ -64,6 +64,7 @@ const OurProjects = ({
               boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.4)",
             }}
             color="#fff"
+            id="projects"
           />
           <div
             style={{

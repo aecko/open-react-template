@@ -3,16 +3,15 @@ import React, { useEffect } from "react";
 import Hero from "../components/sections/Hero";
 import OurProjects from "../components/sections/OurProjects";
 import ContactForm from "../components/sections/ContactForm";
-import Accreditations from "../components/sections/Accreditations";
 import { FullScreenWrapper } from "./styles";
-import { useMediaQuery } from "../hooks/MediaHook";
 import OurServices from "../components/sections/OurServices";
-import { useParams } from "react-router-dom";
-import GenericSection from "../components/sections/GenericSection";
+import { useParams, useLocation } from "react-router-dom";
+import { FadingImageCarousel } from "../components/elements/FadingImageCarousel";
+import { BlackOverlay } from "../components/elements/FadingImageCarousel/style";
 
 const Home = () => {
-  const isMobile = useMediaQuery();
   const sectionId = useParams()?.section;
+  const location = useLocation();
 
   useEffect(() => {
     if (!sectionId) return;
@@ -21,15 +20,20 @@ const Home = () => {
       block: "center",
       inline: "nearest",
     });
-  }, [sectionId]);
+  }, [location]);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#17202a",
+      }}
+    >
       <FullScreenWrapper id="home" style={{ paddingTop: "4em" }}>
+        <FadingImageCarousel />
+        <BlackOverlay />
         <Hero />
       </FullScreenWrapper>
       <OurServices className="illustration-section-03" />
-      <GenericSection></GenericSection>
       <OurProjects topDivider />
       <ContactForm split />
     </div>

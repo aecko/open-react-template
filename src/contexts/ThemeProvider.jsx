@@ -7,7 +7,7 @@ const LightTheme = {
 };
 
 const DarkTheme = {
-  pageBackground: "black",
+  pageBackground: "#17202a",
   titleColor: "white",
   tagLineColor: "white",
 };

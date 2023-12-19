@@ -24,6 +24,7 @@ const Hero = ({ topDivider, bottomDivider }) => {
   );
 
   const anchorContact = document.querySelector("#contactUs");
+  const projectsAnchor = document.querySelector("#projects");
   const history = useHistory();
 
   const defaultOptions = {
@@ -36,112 +37,50 @@ const Hero = ({ topDivider, bottomDivider }) => {
   };
 
   return (
-    <>
-      <Image
-        src={require("../../assets/images/ambar_outside.jpg")}
-        alt="Full Logo"
-        width={400}
-        height={140}
-        style={{
-          borderRadius: "5px",
-          position: "absolute",
-          zIndex: "-10",
-          width: "100%",
-          height: "100vh",
-          left: 0,
-          top: 0,
-          opacity: "1",
-          "-webkit-filter": "brightness(90%)",
-        }}
-        className="mb-32"
-      />
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100vh",
-          zIndex: "-10",
-          backgroundColor: "rgba(0, 0, 0, 0.3)",
-        }}
-      />
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        height: "80vh",
+        width: "100vw",
+        zIndex: 2,
+        marginTop: "2em",
+      }}
+    >
       <div
         style={{
           display: "flex",
           width: "100%",
-          zIndex: 100,
-          height: "90vh",
-          alignItems: "flex-end",
+          height: "100%",
+          alignItems: "flex-start",
+          justifyContent: "center",
+          flexDirection: "column",
         }}
       >
         <div
+          className={innerClasses}
           style={{
-            position: "absolute",
-            top: "30vh",
-            left: 0,
-            paddingLeft: "10%",
+            padding: "2em 0em 0em 6em",
           }}
         >
-          <h1
-            style={styles.headlineText}
-            className="reveal-from-left"
-            data-reveal-delay="200"
-          >
-            Confident designers
-          </h1>
-          <h1
-            style={styles.headlineText}
-            className="reveal-from-left"
-            data-reveal-delay="800"
-          >
-            Competent installers
-          </h1>
-          <h1
-            style={styles.headlineText}
-            className="reveal-from-left"
-            data-reveal-delay="1400"
-          >
-            Competitive specialists
-          </h1>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            justifyContent: "center",
-          }}
-          onClick={() => history.push("/services")}
-        >
-          <Lottie
-            options={defaultOptions}
-            height={130}
-            width={130}
-            style={{ cursor: "pointer" }}
-          />
-        </div>
-      </div>
-      {false && (
-        <div className={innerClasses}>
           <div className="hero-content pull-left">
-            <Image
-              src={require("../../assets/images/logoHero.png")}
-              alt="Full Logo"
-              width={400}
-              height={140}
-              style={{ borderRadius: "5px" }}
-              className="mb-32"
-            />
             <div className="container-xs">
+              <h2
+                className="m-0 mb-32 reveal-from-bottom"
+                data-reveal-delay="300"
+                style={{
+                  color: "white",
+                }}
+              >
+                Fire Protection and Safety Specialists
+              </h2>
               <p
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="300"
               >
-                Ambar Systems Ltd are accredited specialists in the field of
-                Fire Protection and Safety. We are a team of highly qualified
-                professionals with a strong track record of delivering high
-                quality products and services.
+                We are a team of highly qualified professionals with a strong
+                track record of delivering high quality products and services.
               </p>
               <div className="reveal-from-bottom" data-reveal-delay="350">
                 <ButtonGroup>
@@ -150,10 +89,7 @@ const Hero = ({ topDivider, bottomDivider }) => {
                     color="primary"
                     wideMobile
                     onClick={() => {
-                      anchorContact.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      });
+                      history.push("/contact-us");
                     }}
                   >
                     Get in contact
@@ -173,8 +109,25 @@ const Hero = ({ topDivider, bottomDivider }) => {
             </div>
           </div>
         </div>
-      )}
-    </>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "flex-start",
+          marginTop: "-40px",
+        }}
+        onClick={() => history.push("/services")}
+      >
+        <Lottie
+          options={defaultOptions}
+          height={130}
+          width={130}
+          style={{ cursor: "pointer" }}
+        />
+      </div>
+    </div>
   );
 };
 

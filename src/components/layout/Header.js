@@ -127,7 +127,7 @@ const Header = ({
                     <StyledLi>
                       <Link
                         style={{
-                          color: "#000",
+                          color: isActive ? "white" : "black",
                         }}
                         onClick={() => {
                           closeMenu();
@@ -153,7 +153,7 @@ const Header = ({
                           closeMenu();
                         }}
                         style={{
-                          color: "#000",
+                          color: isActive ? "white" : "black",
                         }}
                       >
                         Products & Services
@@ -166,7 +166,7 @@ const Header = ({
                           closeMenu();
                         }}
                         style={{
-                          color: "#000",
+                          color: isActive ? "white" : "black",
                         }}
                       >
                         Projects
@@ -179,7 +179,7 @@ const Header = ({
                           closeMenu();
                         }}
                         style={{
-                          color: "#000",
+                          color: isActive ? "white" : "black",
                         }}
                       >
                         Accreditation
@@ -191,10 +191,9 @@ const Header = ({
                     <ul className="list-reset header-nav-right">
                       <li>
                         <Link
-                          to="#0"
                           className="button button-primary button-wide-mobile button-sm"
                           onClick={() => {
-                            history.push("/contactUs");
+                            history.push("/contact-us");
                             closeMenu();
                           }}
                         >

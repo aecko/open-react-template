@@ -4,10 +4,12 @@ import "image-overlay-react/dist/index.css";
 import { useHistory } from "react-router-dom";
 import {
   FloatingTextContainer,
+  FloatingTextContainer2,
   ImageGrid,
   ImageOverlayWrapper,
   StyledImage,
   StyledImageWithText,
+  StyledImageWithTextWithoutHover,
   StyledTitle,
   UniformGrid,
 } from "./style";
@@ -20,30 +22,18 @@ export const Gallery = ({ imageSet, uniform = true, withOverlay = true }) => {
   const getImages = () =>
     imageSet.map((item, index) => (
       <>
-        {withOverlay && (
-          <ImageOverlayWrapper
-            key={index}
-            onClick={() => {
-              history.push(item.route);
-            }}
-          >
-            <ImgOverlay
-              imgSrc={item.imgSrc}
-              bgColor={colours.blackOverlay}
-              position={item.position}
-              width="100%"
-              height="auto"
-              fSize="28px"
-              fColor="white"
-            >
-              {item.title}
-            </ImgOverlay>
-          </ImageOverlayWrapper>
-        )}
         {!withOverlay && (
+          <StyledImageWithTextWithoutHover>
+            <StyledImage src={item.imgSrc} />
+            <FloatingTextContainer2>
+              <StyledTitle>{item.title}</StyledTitle>
+            </FloatingTextContainer2>
+          </StyledImageWithTextWithoutHover>
+        )}
+        {withOverlay && (
           <StyledImageWithText>
             <StyledImage src={item.imgSrc} />
-            <FloatingTextContainer>
+            <FloatingTextContainer onClick={() => history.push(item.route)}>
               <StyledTitle>{item.title}</StyledTitle>
             </FloatingTextContainer>
           </StyledImageWithText>
